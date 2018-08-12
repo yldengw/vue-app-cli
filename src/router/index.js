@@ -10,8 +10,8 @@ const routes = [
   { path: '/lists', component: List }
 ];
 const router = new VueRouter({
-  mode: 'history',
-  base: '/lovepain/',
+  // mode: 'history',
+  // base: '/lovepain/',
   routes: routes});
 
 export default router;
