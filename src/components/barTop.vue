@@ -24,12 +24,12 @@ export default {
     writeSome: function() {
       this.$store.commit('isShowAlert', true);
     },
-    // refresh: function() {
-    //   this.$store.dispatch('getData', {
-    //     progress: this,
-    //     refresh: true
-    //   });
-    // },
+    refresh: function() {
+      this.$store.dispatch('getData', {
+        progress: this,
+        refresh: true
+      });
+    },
     goBack: function() {
       this.$router.back();
     }
