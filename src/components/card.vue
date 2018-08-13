@@ -9,16 +9,16 @@
     <div class="easy-card-user-info">
       <p>
         <img v-bind:src="res.avatar" alt="">
-        <span>from</span>{{res.nickname}}
+        <span>来自</span>{{res.nickname}}
       </p>
       <p @click="favourite">
-      <span class="fa"
+      <!-- <span class="fa"
       :class="{
       'fa-heart': isFavourited,
       'nsr-favourited': isFavourited,
       'fa-heart-o': isNotFavourited
       }">
-      </span>
+      </span> -->
       {{res.date}}
       </p>
     </div>
@@ -36,9 +36,11 @@
 import {mapState} from 'vuex';
 
 export default {
-  data: () => ({}),
+  data: () => ({
+    endText: ''
+  }),
   components: {
-    'nsr-loading': require('../components/loading.vue'),
+    'nsr-loading': require('../components/loading.vue').default
   },
   mounted: function() {
     this.$nextTick(function () {
@@ -54,6 +56,9 @@ export default {
     },
     loadMore: function() {
       this.fetchData(this);
+    },
+    favourite: function() {
+
     }
   },
   computed: mapState({
