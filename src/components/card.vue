@@ -10,6 +10,13 @@
       <p>
         <img v-bind:src="res.avatar" alt="">
         <span>来自</span>{{res.nickname}}
+          <!--动画引入animate.css库,icon引入font-awesome图标库  -->
+
+      </p>
+      <p style="margin-top: -23px;margin-left: -35px;float: left;">
+          <vue-star animate="animated bounceIn" color="#F05654">
+            <i slot="icon" class="fa fa-heart"></i>
+          </vue-star>
       </p>
       <p @click="favourite">
       <!-- <span class="fa"
@@ -33,6 +40,7 @@
 </template>
 
 <script>
+import VueStar from 'vue-star'
 import {mapState} from 'vuex';
 
 export default {
@@ -40,7 +48,8 @@ export default {
     endText: ''
   }),
   components: {
-    'nsr-loading': require('../components/loading.vue').default
+    'nsr-loading': require('../components/loading.vue').default,
+    VueStar
   },
   mounted: function() {
     this.$nextTick(function () {
