@@ -4,9 +4,9 @@
       <span class="icon fa fa-snapchat" :class="{'easy-fa-color': isHome}"></span>
       <span class="tab-label" :class="{'easy-fa-color': isHome}">首页</span>
     </router-link>
-    <router-link class="tab-item" to="/lists">
-      <span class="icon icon-pages" :class="{'easy-fa-color': isList}"></span>
-      <span class="tab-label" :class="{'easy-fa-color': isList}">列表</span>
+    <router-link class="tab-item" to="/upload">
+      <span class="icon fa fa-cloud-upload" :class="{'easy-fa-color': isList}"></span>
+      <span class="tab-label" :class="{'easy-fa-color': isList}">上传</span>
     </router-link>
     <router-link class="tab-item" to="/option">
       <span class="icon icon-person" :class="{'easy-fa-color': isOption}"></span>
@@ -30,7 +30,7 @@ export default {
         this.isList = false;
         this.isOption = false;
       }
-      if (uri === '/lists') {
+      if (uri === '/upload') {
         this.isHome = false;
         this.isList = true;
         this.isOption = false;

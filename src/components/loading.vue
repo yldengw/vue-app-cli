@@ -10,10 +10,10 @@
 export default {
   props: {
     hideLoading: {
-      // default: true
+      default: true
     },
     isEndText: {
-      // default: ''
+      default: ''
     }
   },
 }

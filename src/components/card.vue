@@ -3,7 +3,7 @@
   v-infinite-scroll="loadMore"
   infinite-scroll-disabled="busy"
   infinite-scroll-distance="10">
-    <div class="easy-card" v-for="res in results">
+    <div class="easy-card" v-for="res in results" :key="res.id">
     <img v-bind:src="res.img" alt="">
     <p>{{res.content}}</p>
     <div class="easy-card-user-info">

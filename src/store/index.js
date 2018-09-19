@@ -9,7 +9,7 @@ const state = {
   cardData: [],
   isloadingComplete: false,
   busy: false,
-  isShow: false,
+  isShow: false
 };
 
 const getters = {};
@@ -38,15 +38,14 @@ const actions = {
     progress.$Progress.start();
     context.commit('updateLoadingState', false);
     context.commit('updateBusyState', true);
-
     /**
      * use vue-resource
      */
-    Vue.http.get('./static/mock/api.json').then((response) => {
+    Vue.http.get('http://localhost:8080/share-list').then((response) => {
       const json = response.data;
       context.commit('updateLoadingState', true);
       context.commit('updateBusyState', false);
-      if (isRefresh === true) {
+      if (isRefresh !== false && !isRefresh) {
         context.commit('refreshData', json);
       } else {
         context.commit('addData', json);
