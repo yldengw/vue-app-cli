@@ -3,7 +3,6 @@
     <a class="icon icon-refresh pull-left" v-if="showRefeshIcon" @click="refresh"></a>
     <a class="icon icon-left-nav pull-left" v-if="showReturnIcon" @click="goBack"></a>
     <a class="icon icon-compose pull-right" v-if="showWriteIcon" @click="writeSome"></a>
-    <h1 class="title">NegativeY</h1>
   </header>
 </template>
 

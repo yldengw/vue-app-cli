@@ -11,7 +11,8 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "build": "node build/build.js",
-    "api": "node app.js"
+    "api": "node app.js",
+    "heroku": "NODE_ENV=production node index"
   },
   "dependencies": {
     "fastclick": "^1.0.6",
